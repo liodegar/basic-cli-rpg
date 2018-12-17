@@ -50,7 +50,6 @@ public class FightMenuImpl extends AbstractMenuImpl {
         if (winner.equals(rpgGameSession.getPlayerCharacter()) ){
             ConsoleUtil.log("Congratulations! You have won the match. Your current level=" +rpgGameSession.getPlayerCharacter().getLevel());
             rpgGameSession.setEnemy(rpgGameSession.getRpgGame().getRandomEnemy());
-            //System.out.println("next enemy = " + rpgGameSession.getEnemy());
             ConsoleUtil.log("Be careful in your next fight. Your next enemy is " + rpgGameSession.getEnemy().getMainAttributes());
             ConcurrentUtil.sleepForSeconds(5);
             setNextMenus(buildNextMenus());

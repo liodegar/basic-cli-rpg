@@ -18,7 +18,9 @@ This is a basic CLI RPG that is able to manage different RPG topics and games in
 - Test coverage: the main different layer artifacts (utility, service and repository) were tested to validate their proper functionality.
 
 - Extensibility: new RPG topics and games can be added in a declarative way. New RPG topic implementations are retrieved dynamically (at runtime) 
-by using a factory that creates instances belonging to the RPGTopic hierarchy.
+by using a factory that creates instances belonging to the RPGTopic hierarchy. The Abstract Factory pattern was not an option because "Supporting new kinds of products is difficult".
+Extending abstract factories to produce new kinds of Products is cumbersome, because the AbstractFactory interface fixes the set of products 
+that can be created. Supporting new kinds of products requires extending the factory interface, which involves changing the AbstractFactory class and all of its subclasses.
 
 ## Stack
 - Java 8

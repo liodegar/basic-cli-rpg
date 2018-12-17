@@ -36,6 +36,7 @@ public class LoadGameMenuImpl extends AbstractMenuImpl {
         for (int i = 0; i < files.size(); i++) {
             menuItems.add(new MenuItem(i + 1, files.get(i)));
         }
+        setNumberOfOptions(menuItems.size());
         return new TextContentImpl(title, menuItems, Collections.emptyList(), "There is no saved files");
     }
 
@@ -50,7 +51,7 @@ public class LoadGameMenuImpl extends AbstractMenuImpl {
         String option = getScanner().next();
         try {
             while (true) {
-                if (isValidIntOption(option)) {
+                if (isValidIntOption(option) && isOptionInRange(option)) {
                     rpgGameSession = gameService.loadRpgGameSession(Paths.get(files.get(Integer.parseInt(option) - 1)));
                     setNextMenus(buildNextMenus());
                     getNextMenu(2).processMenu();

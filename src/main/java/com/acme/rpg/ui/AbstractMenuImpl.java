@@ -24,6 +24,7 @@ public abstract class AbstractMenuImpl implements Menu {
     private Menu previousMenu;
     private Scanner scanner = new Scanner(System.in);
     private String selectedOption;
+    private int numberOfOptions;
 
 
     public AbstractMenuImpl() {
@@ -93,7 +94,7 @@ public abstract class AbstractMenuImpl implements Menu {
         printMenu();
         String option = getScanner().next();
         while (true) {
-            if (isValidIntOption(option)) {
+            if (isValidIntOption(option) && isOptionInRange(option)) {
                 setSelectedOption(option);
                 setNextMenus(buildNextMenus());
                 getNextMenu(Integer.parseInt(option)).processMenu();
@@ -108,6 +109,11 @@ public abstract class AbstractMenuImpl implements Menu {
                 option = getScanner().next();
             }
         }
+    }
+
+    protected boolean isOptionInRange(String value) {
+        int option = Integer.parseInt(value);
+        return (option > 0 && option <= getNumberOfOptions());
     }
 
     protected void checkGeneralOption(String option) {
@@ -185,8 +191,8 @@ public abstract class AbstractMenuImpl implements Menu {
 
     protected void printStats(RpgGameSession rpgGameSession) {
         ConsoleUtil.printStats(rpgGameSession);
-        ConsoleUtil.log("Be patient. We are starting the game...");
-        ConcurrentUtil.sleepForSeconds(5);
+        ConsoleUtil.log("Be patient. We are starting the fighting match...");
+        ConcurrentUtil.sleepForSeconds(10);
     }
 
     protected Menu getNextMenu(int option) {
@@ -196,4 +202,12 @@ public abstract class AbstractMenuImpl implements Menu {
     protected abstract MenuContent buildContent();
 
     protected abstract List<Menu> buildNextMenus();
+
+    protected void setNumberOfOptions(int numberOfOptions) {
+        this.numberOfOptions = numberOfOptions;
+    }
+
+    public int getNumberOfOptions() {
+        return numberOfOptions;
+    }
 }

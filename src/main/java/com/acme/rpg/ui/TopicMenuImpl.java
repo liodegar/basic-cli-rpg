@@ -31,6 +31,7 @@ public class TopicMenuImpl extends AbstractMenuImpl {
             RpgTopic rpgTopic = rpgTopics.get(i);
             menuItems.add(new MenuItem(i + 1, rpgTopic.getGenre(), rpgTopic.getDescription()));
         }
+        setNumberOfOptions(menuItems.size());
         return new TextContentImpl(title, menuItems, Collections.emptyList());
     }
 

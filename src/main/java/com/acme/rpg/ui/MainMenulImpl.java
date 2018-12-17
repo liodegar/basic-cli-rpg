@@ -21,6 +21,7 @@ public class MainMenulImpl extends AbstractMenuImpl {
         String title = "Main menu: please, select one of the options.";
         List<MenuItem> menuItems = Arrays.asList(new MenuItem(1, "Start game"),
                 new MenuItem(2, "Load game"));
+        setNumberOfOptions(menuItems.size());
         return new TextContentImpl(title, menuItems, Collections.emptyList());
     }
 

@@ -11,7 +11,7 @@ public class DarkDungeonRpgGameImpl extends AbstractRpgGameImpl {
 
     public DarkDungeonRpgGameImpl() {
         super("Dark Dungeon", new FantasyTopicImpl(),
-                "In this game you need to fight against different enemies for the freedom of the Kabudary kingdom",
+                "In this game you need to fight against different enemies for the freedom of the Kabudary kingdom.",
                 Arrays.asList(new Mage(), new Rogue(), new Warrior()),
                 Arrays.asList(new GenericEnemy("Daggerfall", Race.ORC, Gender.MALE),
                         new GenericEnemy("Skyrim", Race.ORC, Gender.FEMALE),

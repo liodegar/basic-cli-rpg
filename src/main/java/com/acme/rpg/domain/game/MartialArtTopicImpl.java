@@ -7,7 +7,7 @@ package com.acme.rpg.domain.game;
 public class MartialArtTopicImpl extends AbstractRpgTopicImpl {
 
     public MartialArtTopicImpl() {
-        super("Martial Art", "Martial Art is a genre where all the characters are martial art experts");
+        super("Martial Art", "Martial Art is a genre where all the characters are martial art experts.");
     }
 
 }

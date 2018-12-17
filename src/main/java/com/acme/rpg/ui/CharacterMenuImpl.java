@@ -46,6 +46,7 @@ public class CharacterMenuImpl extends AbstractMenuImpl {
             PlayerCharacter playerCharacter = playerCharacters.get(i);
             menuItems.add(new MenuItem(i + 1, playerCharacter.getCharacterClass()));
         }
+        setNumberOfOptions(menuItems.size());
         return new TextContentImpl(title, menuItems, Collections.emptyList());
     }
 
@@ -61,7 +62,7 @@ public class CharacterMenuImpl extends AbstractMenuImpl {
         try {
             while (true) {
 
-                if (isValidIntOption(option)) {
+                if (isValidIntOption(option) && isOptionInRange(option)) {
                     PlayerCharacter playerCharacter = playerCharacters.get(Integer.parseInt(option) - 1);
                     ConsoleUtil.log("Introduce a character name..");
                     String characterName = getScanner().next();
@@ -105,7 +106,7 @@ public class CharacterMenuImpl extends AbstractMenuImpl {
         printMenuItems(getRaceMenuItems());
         String option = getScanner().next();
         while (true) {
-            if (isValidIntOption(option)) {
+            if (isValidIntOption(option) && isOptionInEnumRange(option, Race.values().length)) {
                 int race = Integer.parseInt(option);
                 playerCharacter.setRace(Race.getFromValue(race));
                 break;
@@ -116,12 +117,17 @@ public class CharacterMenuImpl extends AbstractMenuImpl {
         }
     }
 
+    private boolean isOptionInEnumRange(String value, int length) {
+        int option = Integer.parseInt(value);
+        return (option > 0 && option <= length);
+    }
+
     private void setGender(PlayerCharacter playerCharacter) {
         ConsoleUtil.log("Select the character gender from the following list:");
         printMenuItems(getSexMenuItems());
         String option = getScanner().next();
         while (true) {
-            if (isValidIntOption(option)) {
+            if (isValidIntOption(option) && isOptionInEnumRange(option, Gender.values().length)) {
                 int gender = Integer.parseInt(option);
                 playerCharacter.setGender(Gender.getFromValue(gender));
                 break;

@@ -35,6 +35,7 @@ public class GameMenuImpl extends AbstractMenuImpl {
             RpgGame rpgGame = rpgGames.get(i);
             menuItems.add(new MenuItem(i + 1, rpgGame.getName(), rpgGame.getStoryLine()));
         }
+        setNumberOfOptions(menuItems.size());
         return new TextContentImpl(title, menuItems, Collections.emptyList());
     }
 
