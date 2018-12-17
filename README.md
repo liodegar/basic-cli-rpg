@@ -18,8 +18,8 @@ This is a basic CLI RPG that is able to manage different RPG topics and games in
 - Test coverage: the main different layer artifacts (utility, service and repository) were tested to validate their proper functionality.
 
 - Extensibility: new RPG topics and games can be added in a declarative way. New RPG topic implementations are retrieved dynamically (at runtime) 
-by using a factory that creates instances belonging to the RPGTopic hierarchy. The Abstract Factory pattern was not an option because "Supporting new kinds of products is difficult".
-Extending abstract factories to produce new kinds of Products is cumbersome, because the AbstractFactory interface fixes the set of products 
+by using a factory that creates instances belonging to the RPGTopic hierarchy. The Abstract Factory pattern was not an option because as GoF authors stated: "Supporting new kinds of products is difficult".
+In fact, extending abstract factories to produce new kinds of Products is cumbersome, because the AbstractFactory interface fixes the set of products 
 that can be created. Supporting new kinds of products requires extending the factory interface, which involves changing the AbstractFactory class and all of its subclasses.
 
 ## Stack
@@ -48,11 +48,11 @@ After this, the Multi-Topic RPG (MT-RPG) app will start.
    extends the `com.acme.rpg.domain.game.AbstractRpgTopicImpl` class.
    Furthermore, add in the `application.properties` file the following keys:
     
-    `#full qualified class name of the new RPG topic class.`
-    `rpg.topic.key-3=com.acme.rpg.domain.game.ScienceFictionTopicImpl` 
+    ` #full qualified class name of the new RPG topic class.`
+    ` rpg.topic.key-3=com.acme.rpg.domain.game.ScienceFictionTopicImpl` 
     
-    `#Science Fiction RPG games`
-    `ScienceFictionTopicImpl.game.key-1=com.acme.rpg.domain.game.SpaceOdysseyRpgGameImpl`
+    ` #Science Fiction RPG games`
+    ` ScienceFictionTopicImpl.game.key-1=com.acme.rpg.domain.game.SpaceOdysseyRpgGameImpl`
 
 For every RPG game belonging to new RPG topic, you should include a key following this pattern: `newClassSimpleName.game.key-n`, where n indicates the number of the game.
 
