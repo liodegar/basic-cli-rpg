@@ -7,14 +7,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Basic registry to get the beans
+ * Basic registry to get the beans managed by the application.
  * Created by Liodegar
  */
 public final class ApplicationContext {
 
     private static final RpgLogger logger = RpgLogger.getLogger(GameServiceImpl.class);
 
-    public static final Map<String, Object> registry = new HashMap<>();
+    private static final Map<String, Object> registry = new HashMap<>();
 
     /**
      * To avoid instantiation from outside
