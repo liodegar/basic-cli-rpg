@@ -48,11 +48,11 @@ After this, the Multi-Topic RPG (MT-RPG) app will start.
    extends the `com.acme.rpg.domain.game.AbstractRpgTopicImpl` class.
    Furthermore, add in the `application.properties` file the following keys:
     
-    ` #full qualified class name of the new RPG topic class.`
-    ` rpg.topic.key-3=com.acme.rpg.domain.game.ScienceFictionTopicImpl` 
+    `#full qualified class name of the new RPG topic class.`
+    `rpg.topic.key-3=com.acme.rpg.domain.game.ScienceFictionTopicImpl` 
     
-    ` #Science Fiction RPG games`
-    ` ScienceFictionTopicImpl.game.key-1=com.acme.rpg.domain.game.SpaceOdysseyRpgGameImpl`
+    `#Science Fiction RPG games`
+    `ScienceFictionTopicImpl.game.key-1=com.acme.rpg.domain.game.SpaceOdysseyRpgGameImpl`
 
 For every RPG game belonging to new RPG topic, you should include a key following this pattern: `newClassSimpleName.game.key-n`, where n indicates the number of the game.
 
