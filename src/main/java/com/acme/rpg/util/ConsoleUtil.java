@@ -6,6 +6,7 @@ import com.acme.rpg.domain.game.RpgGameSession;
 import com.acme.rpg.ui.Color;
 
 /**
+ * Basic utility class for printing messages to the STOUT console
  * Created by Liodegar
  */
 public final class ConsoleUtil {

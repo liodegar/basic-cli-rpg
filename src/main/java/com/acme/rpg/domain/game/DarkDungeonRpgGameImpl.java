@@ -5,6 +5,7 @@ import com.acme.rpg.domain.character.*;
 import java.util.Arrays;
 
 /**
+ * Dark Dungeon RPG game
  * Created by Liodegar
  */
 public class DarkDungeonRpgGameImpl extends AbstractRpgGameImpl {

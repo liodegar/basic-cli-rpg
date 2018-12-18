@@ -1,9 +1,6 @@
 package com.acme.rpg.service;
 
-import com.acme.rpg.dao.DataAccessException;
 import com.acme.rpg.domain.character.Character;
-import com.acme.rpg.domain.character.Enemy;
-import com.acme.rpg.domain.character.PlayerCharacter;
 import com.acme.rpg.domain.game.RpgGame;
 import com.acme.rpg.domain.game.RpgGameSession;
 import com.acme.rpg.domain.game.RpgTopic;
@@ -12,7 +9,7 @@ import java.nio.file.Path;
 import java.util.List;
 
 /**
- * Defines the contract of the RPG game
+ * Business interface that defines the contract of the RPG game
  * Created by Liodegar
  */
 public interface GameService {

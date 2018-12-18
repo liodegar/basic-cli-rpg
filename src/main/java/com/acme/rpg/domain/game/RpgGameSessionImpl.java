@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 /**
+ * Default impl of RpgGameSession interface
  * Created by Liodegar
  */
 public class RpgGameSessionImpl implements RpgGameSession {

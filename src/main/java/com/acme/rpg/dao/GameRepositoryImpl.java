@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * Default impl of GameRepository
+ * Default impl of the GameRepository interface
  * Created by Liodegar
  */
 public class GameRepositoryImpl implements GameRepository {

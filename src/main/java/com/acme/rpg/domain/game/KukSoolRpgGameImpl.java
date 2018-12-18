@@ -5,6 +5,7 @@ import com.acme.rpg.domain.character.*;
 import java.util.Arrays;
 
 /**
+ * Kuk Sool RPG game
  * Created by Liodegar
  */
 public class KukSoolRpgGameImpl extends AbstractRpgGameImpl {

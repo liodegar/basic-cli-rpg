@@ -2,6 +2,9 @@ package com.acme.rpg.util;
 
 import java.util.concurrent.ThreadLocalRandom;
 
+/**
+ * Basic utility class for generating pseudo random numbers
+ */
 public final class RandomUtil {
 
     /**

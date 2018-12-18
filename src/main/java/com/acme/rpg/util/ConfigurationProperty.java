@@ -9,8 +9,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
- * Class ConfigurationProperty
- * <p>
+ * Class ConfigurationProperty that enables the properties retrieving from application.properties file
  *
  * @author Liodegar Bracamonte
  */

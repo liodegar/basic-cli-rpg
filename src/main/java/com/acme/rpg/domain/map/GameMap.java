@@ -1,7 +1,6 @@
 package com.acme.rpg.domain.map;
 
 import com.acme.rpg.domain.IDomainObject;
-import com.acme.rpg.domain.game.RpgGameSession;
 import com.acme.rpg.util.RandomUtil;
 
 import java.util.Arrays;

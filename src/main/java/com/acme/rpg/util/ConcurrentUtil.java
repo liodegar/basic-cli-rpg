@@ -5,6 +5,7 @@ import com.acme.rpg.util.logging.RpgLogger;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * Basic utility class for managing concurrent functionalities
  * Created by Liodegar
  */
 public final class ConcurrentUtil {

@@ -19,6 +19,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
+ * Default impl of GameService interface
  * Created by Liodegar
  */
 public class GameServiceImpl implements GameService {

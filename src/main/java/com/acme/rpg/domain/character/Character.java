@@ -6,6 +6,9 @@ import com.acme.rpg.util.ConcurrentUtil;
 import com.acme.rpg.util.ConsoleUtil;
 import com.acme.rpg.util.RandomUtil;
 
+/**
+ * Base class for RPG characters, for both player and enemies.
+ */
 public abstract class Character implements IDomainObject {
 
     private static final long serialVersionUID = -3260221744490555391L;

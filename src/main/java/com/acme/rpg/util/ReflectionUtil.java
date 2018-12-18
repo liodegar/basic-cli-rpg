@@ -3,7 +3,7 @@ package com.acme.rpg.util;
 import com.acme.rpg.util.logging.RpgLogger;
 
 /**
- * Utility class for handling reflection
+ * Utility class for handling reflection requirements
  * Created by Liodegar
  */
 public final class ReflectionUtil {

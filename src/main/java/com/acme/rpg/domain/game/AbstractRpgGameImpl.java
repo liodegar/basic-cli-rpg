@@ -9,6 +9,7 @@ import com.acme.rpg.util.RandomUtil;
 import java.util.List;
 
 /**
+ * Base class of a RpgGame game
  * Created by Liodegar
  */
 public abstract class AbstractRpgGameImpl implements RpgGame {

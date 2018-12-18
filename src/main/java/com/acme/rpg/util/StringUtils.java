@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Utility class for handling strings
+ * Utility class for handling strings operations
  * Created by Liodegar
  */
 public final class StringUtils {

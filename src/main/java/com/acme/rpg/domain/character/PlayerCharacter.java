@@ -1,7 +1,7 @@
 package com.acme.rpg.domain.character;
 
 /**
- * Base class of all player chareacters
+ * Base class of all player characters
  */
 public abstract class PlayerCharacter extends Character {
     public PlayerCharacter() {

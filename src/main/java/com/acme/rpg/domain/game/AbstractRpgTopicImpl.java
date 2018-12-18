@@ -1,6 +1,7 @@
 package com.acme.rpg.domain.game;
 
 /**
+ * Base class of a RpgTopic
  * Created by Liodegar
  */
 public abstract class AbstractRpgTopicImpl implements RpgTopic {
